@@ -104,7 +104,7 @@ this:
         "Cannot have multiple instances of the same digital object"
       ]
     },
-    "warning": NULL,
+    "warning": null,
     "invalid_object": "#<JSONModel(:archival_object) {\"publish\"=>false, ...}"
   }
 ```
