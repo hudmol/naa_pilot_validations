@@ -1,3 +1,4 @@
 en:
   validation_errors:
+    component_identifier_already_in_use: Must be unique within this repository
     cannot_have_multiple_instances_of_the_same_digital_object: Cannot have more than one instance of the same Digital Object
