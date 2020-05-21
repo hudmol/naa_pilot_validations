@@ -1,8 +1,9 @@
 module JSONModel
   module Validations
-    def self.check_unique_digital_object_instances(hash)
+    def self.check_naa_item(hash)
       errors = []
 
+      # Unique Digital Objects
       do_uris =  hash['instances']
                    .select{|instance| instance['instance_type'] == "digital_object" }
                    .map{|instance| instance['digital_object']['ref']}
@@ -15,8 +16,8 @@ module JSONModel
     end
 
     if JSONModel(:archival_object)
-      JSONModel(:archival_object).add_validation("check_unique_digital_object_instances") do |hash|
-        check_unique_digital_object_instances(hash)
+      JSONModel(:archival_object).add_validation("check_naa_item") do |hash|
+        check_naa_item(hash)
       end
     end
   end
